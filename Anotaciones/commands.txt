@@ -1,0 +1,28 @@
+MAIN GO TOOLS FOR DEVELOPMENTS
+
+*
+go run 
+--> compiles coide, create executable and then runs it
+NOT RECOMENDED FOR BIG PROGRAMS
+
+*
+go build
+--> compiles code and creates an executable
+
+*
+go tests
+--> runs tests , including coverage and benchmarking
+
+
+EJEMPLO:
+hice:
+1. go build hello.go
+--> eso creo un application llamado hello
+2. para correrlo :
+C:\Pruebas\GO\Transitioning-from-java-to-go-1-rgadda>hello
+Hello, world!
+
+O 
+
+C:\Pruebas\GO\Transitioning-from-java-to-go-1-rgadda>go run hello.go
+Hello, world!

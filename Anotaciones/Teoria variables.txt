@@ -1,0 +1,104 @@
+link: https://www.linkedin.com/learning/transition-from-java-to-go/declaring-variables?autoSkip=true&resume=false&u=2217474
+
+----------------------------------------------------------------------------------------
+
+declaracion de variables en
+GO                                          Java
+var [name] [type]                           
+var greeting string                         String greeting = ""
+--> por defect el string es ""
+no null
+
+var greeting = "Hello"                      String greeting = "Hello"
+O
+greeting := "Hello"                         String greeting = "Hello"
+-->RECOMENDED
+
+BY DEFAULT SON PACKAGE SCOPE
+PERO si en vez de minuscula en el nombre de la variable se arranca con mayuscula es publica:
+Ejemplos:
+PACKAGE SCOPE                   PUBLIC SCOPE
+greeting := "Hello"  se pone    Greeting := "Hello"
+var greeting string  se pone    var Greeting string 
+var greeting = "Hello" se pone  var Greeting = "Hello"
+
+______________________________________________
+
+TIPOS DE DATOS DE GO
+
+BASIC TYPES: numbers,strings and booleans
+COMPOSITE TYPE: arrays, structs, pointers, functions, interfaces, slices, maps and channels
+
+______________________________________________
+
+ver limites de los integer en [limites datos go integer]image
+Si no se especifica entre int8, int16, int32 y int64, la palabra int va a tomar el int32 o int 64
+byte --> uint8
+rune --> int32
+
+GO tiene dos float types: float32 y float64, SI SOLO SE PONE float, toma el float64
+______________________________
+AND --> &&
+OR --> || 
+como en java
+
+____________________
+
+String multilinea:
+var raw =   'Hello, world!
+             Goodbye, world!'
+
+___________________________________________
+
+VALORES POR DEFECTO EN  [valores por defecto segun tipo]image
+nunca son null por defecto
+
+_____________________________________________________
+
+en vez de hacer :
+var v0 int
+var v1 float64
+var v2 bool
+var v3 string
+
+se puede hacer:
+var (
+	v0 int
+	v1 float64
+	v2 bool
+	v3 string
+)
+
+______________________________
+si en un string pones
+fmt.Printf("[v0]: variable type = %T, value = %v;\n", v0, v0) --> %T con println no funciona
+%T va a poner el tipo del dato
+%v va a poner el valor del dato
+
+en %T printf.txt
+
+______________________________
+
+[imagen de funcionamiento de pointers]image
+
+The * operator is known as the dereferencing operator
+The & operator is known as the address operator
+
+The syntax to declare a pointer is var name *Type
+   For example, var ptr *string declares a string pointer
+Given the variable a, we initialize var ptr *string = &a
+We retrieve the value at a pointer address using value := *ptr
+
+the ZERO VALUE de un pointer es nil (null en java)
+pointers.txt
+
+____________________
+
+cuando una variable no se usa tira error
+pero si queremos llamar a una funcion que devuelve 2 valores y solo usar uno se puede usar el _:
+
+ejemplo :
+
+area, _ := nombre_funcion
+solo se asigna la variable area
+

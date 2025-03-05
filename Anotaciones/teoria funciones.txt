@@ -1,0 +1,63 @@
+funciones::
+
+se definen con func nombre (parametro1 tipoParametro, ...)
+
+si se pone el nombre es mayuscula se pueden usar afuera del package
+
+se pueden definir en un objeto o de manera independiente
+
+func add(x int, y int) int {
+     return x + y
+ }
+
+_____________________________________
+
+funciones anonimas:
+solo existen mientras se ejecutan y no tienen nombre
+
+ func main() {
+     sub := func(x int, y int) int {
+         return x -y
+     }
+    fmt.Println("Add: ", add(3, 2))
+    fmt.Println ("Sub: ", sub(3, 2))
+
+
+______________________________________
+
+pero si se pasa un pointer en vez, cambia el valor devuelva algo o no
+
+func negate(x *int) {
+    neg := -*x
+     *x = neg
+ }
+func main()
+    x := 3
+    fmt. .Println(x)// 3
+    negate (&X)
+     fmt. Println(x)// -3
+ }
+
+________________________________________
+
+ //funciones con multiples resultados
+
+ se hace con 
+
+ func reactangle (x int, y int) (int, int)
+ toma dos valores y devuelve dos valores
+
+o
+
+func reactangle (x int, y int) (area int, circuf int)
+toma dos valores y devuelve dos valores
+en este caso el return es vacio, solo return ya que toma los valores  de las variables 
+    con ese nombre
+
+func rectangle(x int, y int) (area int, circumf int) {
+    area = x * y
+    circumf = 2 * (x + y)
+    return
+}
+
+es recomendable esto a devolver a un objeto como respuesta

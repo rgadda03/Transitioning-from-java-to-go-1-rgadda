@@ -1,0 +1,16 @@
+No hay linea de manejo de exceptiones separada del flujo comun como java
+Aca se hace en el mismo flujo.
+
+Go provides the inbuilt error type- its zero value is nil
+Maneras de asignarle valor al error:
+
+errors.New("mensaje")
+fmt.Errorf("msg:", x)
+
+
+_________________________________________________________
+
+palabra panic
+cuando el programa no se puede recuperar del error
+panic ("error",err)
+

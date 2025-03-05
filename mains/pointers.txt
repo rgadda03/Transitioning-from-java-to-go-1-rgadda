@@ -1,0 +1,20 @@
+package main
+
+import "fmt"
+
+func main() {
+	//declare new pointer
+	var ptr *string
+
+	//initialize a greeting
+	greeting := "Hello, world!"
+
+	//assign greeting adress to pointer
+	ptr = &greeting
+
+	// Print out our variables
+	fmt.Println("Greeting:", greeting)
+	fmt.Println("Address of greeting:", ptr)
+	fmt.Println("Value stored in ptr:", *ptr)
+
+}

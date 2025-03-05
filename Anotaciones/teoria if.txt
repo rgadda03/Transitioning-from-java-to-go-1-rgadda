@@ -1,0 +1,8 @@
+se puede hacer en un if esto:
+
+if r := X%2; r == ٥ {
+    fmt.Printf("% is even. \n", x)
+     return
+}
+
+esto lo que hace es ahorrar la linea de X%2 fuera de la condicion if

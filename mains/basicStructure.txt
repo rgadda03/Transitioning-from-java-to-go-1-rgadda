@@ -1,0 +1,21 @@
+package main
+
+import "fmt"
+
+type city struct {
+	name  string
+	tempC float64
+}
+
+func NewCity(name string) city {
+	return city{
+		name: name,
+	}
+}
+
+func main() {
+	c := NewCity("London")
+	c.tempC = 7.5
+
+	fmt.Printf("[%v]:tempC=%v\n", c.name, c.tempC)
+}

@@ -1,0 +1,58 @@
+se usa type y struct para defenir un estructura
+por ejemplo:
+
+
+declaracion:
+type city struct{
+    name string
+    tempC float64
+}
+
+uso:
+c := city{
+    name: "London",
+    tempC: "7.5"
+}
+o
+c := city{
+    name: "London"
+}
+
+para usar name:
+c.name
+para un update:
+c.name := "Nuevo nombre"
+
+
+Se usa constructor para reutilizar codigo:
+
+type city struct {
+    name string
+    tempC float64
+}
+
+func newCity (n string) city {
+    return city{
+        name: n,
+    }
+ }
+
+__________________________________________________________________
+
+dado:
+type city struct {
+     name string
+    tempC float64
+}
+
+esto esta mal para asignarle un valor extra:
+ func (с city) tempF() {
+    C. tempC = (c. tempC * 9 5) + 32
+ }
+
+ tiene que ser:
+  func (с *city) tempF() {
+    C. tempC = (c. tempC * 9 5) + 32
+ }
+
+ ASI ES UN POINTER

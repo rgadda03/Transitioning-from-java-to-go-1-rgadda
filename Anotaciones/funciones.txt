@@ -1,0 +1,38 @@
+package main
+
+import "fmt"
+
+func add(x int, y int) int {
+	return x + y
+}
+
+func main() {
+	x := 3
+	y := 2
+	sub := func(x int, y int) int {
+		return x - y
+	}
+	fmt.Printf("add(%v, %v): %v\n", x, y, add(x, y))
+	fmt.Printf("sub(%v, %v): %v\n", x, y, sub(x, y))
+}
+
+//ejemplo con punteros en teoria
+
+
+______________________________________________
+
+como en java si se pone el return se termina la ejecucion entonces se puede jugar con eso
+
+
+_____________________________________________
+
+functiones deferidas, deferred functions
+
+The defer statement is applied before a function call - for example,
+ defer myfunc ()
+ It delays function execution until the surrounding function finishes
+ In the case of multiple deferred functions, they will be executed on a
+ LIFO (last in, first out) basis
+
+
+important cleans operations
